@@ -12,8 +12,8 @@ const navLinks = [
 function NavBar() {
     return (
         <nav id="navbar" >
-            {navLinks.map((title, index) => (
-                <NavButton key={index} link={title.link} title={title.title} />
+            {navLinks.map((link) => (
+                <NavButton link={link.link} title={link.title} />
             ))}
         </nav>
     );
