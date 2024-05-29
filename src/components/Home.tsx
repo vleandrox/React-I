@@ -7,7 +7,7 @@ function Home() {
     return (
         <>
             <Header></Header>
-            <Hero></Hero>
+            <Hero first={"Tecnologia"} second={"Renovada"}></Hero>
             <main>
                 <div className={styles["product-container"]} id="products">
                     <a className={styles["product-card"]} href="#">
