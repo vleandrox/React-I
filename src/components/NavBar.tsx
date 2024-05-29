@@ -1,20 +1,14 @@
 import './NavBar.module.css'
 import NavButton from './NavButton';
 
-const navLinks = [
-    { title: 'Ofertas', link: '#' },
-    { title: 'Como Comprar', link: '#' },
-    { title: 'Costos y Tarifas', link: '#' },
-    { title: 'Mis Pedidos', link: '#' },
-    { title: 'Garantia', link: '#' }
-];
-
 function NavBar() {
     return (
         <nav id="navbar" >
-            {navLinks.map((link) => (
-                <NavButton link={link.link} title={link.title} />
-            ))}
+            <NavButton title="Ofertas" link="/" />
+            <NavButton title="Cómo comprar" link="/" />
+            <NavButton title="Costos y tarifas" link="/" />
+            <NavButton title="Mis pedidos" link="/" />
+            <NavButton title="Garantía" link="/" />            
         </nav>
     );
 }
