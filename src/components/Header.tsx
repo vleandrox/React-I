@@ -7,7 +7,7 @@ function Header(){
         <header className={styles.header}>
         <div className={styles["header-container"]}>
           <Link to="/" className={styles["header-logo"]}>
-            <img className={styles["header-logo-img"]} src="./tiendamia-logo.svg" width="218" alt="Logo store"/>
+            <img className={styles["header-logo-img"]} src="../tiendamia-logo.svg" width="218" alt="Logo store"/>
           </Link>
           <form className={styles["header-form"]}>
             <input className={styles["header-input"]} type="text" placeholder="Search" id="search"/>
