@@ -146,7 +146,7 @@ const prod10 = new Product(
   true
 );
 const prod11 = new Product(
-  "A1B2C3",
+  "A1B2C2",
   "MacBook Pro 13'4",
   "Experience the power of creativity with the MacBook Pro 13'4. Featuring 8GB of RAM and 512GB of storage, this laptop provides the performance and storage capacity needed for demanding tasks. The sleek design in silver and space gray adds a touch of sophistication. The high-resolution Retina display brings your visuals to life, whether you're editing photos, creating videos, or simply browsing the web. With the latest technology and a lightweight build, the MacBook Pro 13'4 is the perfect companion for professionals and creative individuals alike.",
   750000,
@@ -279,29 +279,41 @@ const prod20 = new Product(
   ["Space Gray", "Silver", "Gold"],
   false
 );
-
+const prod21 = new Product(
+  "M4N5O80",
+  "Apple Watch Series 5",
+  "Embrace a healthier lifestyle with the Apple Watch Series 6. With a 44mm display, GPS functionality, and a sleek space gray color, this smartwatch is the perfect companion for your fitness journey. Track your workouts, monitor your health, and stay connected on the go. The high-resolution Retina display provides clear visuals, whether you're checking notifications or tracking your fitness goals. With a variety of customizable watch faces and bands, the Apple Watch Series 6 lets you express your personal style while enjoying the latest in wearable technology.",
+  100000,
+  1,
+  [
+    "https://i.postimg.cc/HxGQcrcp/mock1.jpg",
+    "https://i.postimg.cc/Y91Q1tYQ/mock2.jpg",
+  ],
+  ["Space Gray", "Silver", "Gold"],
+  false
+);
 const products = [
   prod1,
-  prod11,
-  prod14,
-  prod18,
-  prod13,
+  prod2,
+  prod3,
   prod4,
-  prod16,
+  prod5,
   prod6,
   prod7,
   prod8,
-  prod19,
   prod9,
   prod10,
+  prod11,
   prod12,
-  prod3,
+  prod13,
   prod14,
-  prod15,
-  prod5,
+  prod15, 
+  prod16,
   prod17,
-  prod2,
+  prod18,
+  prod19,
   prod20,
+  prod21
 ];
 
 export default products;

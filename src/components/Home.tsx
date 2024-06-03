@@ -17,11 +17,11 @@ function Home() {
                             key={each.id}
                             id={each.id}
                             title={each.title}
-                            price={each.title}
+                            price={each.price}
                             color={each.colors[0]}
                             image={each.images[0]}
                         />
-                    ))}                    
+                    ))}
                 </div>
             </main>
             <Footer></Footer>
