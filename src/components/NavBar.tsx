@@ -8,7 +8,7 @@ function NavBar() {
             <NavButton title="Cómo comprar" link="/" />
             <NavButton title="Costos y tarifas" link="/" />
             <NavButton title="Mis pedidos" link="/" />
-            <NavButton title="Garantía" link="/" />            
+            <NavButton title="OnSale" link="/onsale" />            
         </nav>
     );
 }
