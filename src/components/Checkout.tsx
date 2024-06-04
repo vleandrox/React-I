@@ -1,33 +1,48 @@
 import styles from './Checkout.module.css'
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 interface Product {
-    id:number
+    id: number
     price: number;
-    quantity:number;
-    total:number;
-  }
-  
-  interface CheckoutProps {
-    product: Product;
-  }
+    quantity: number;
+    total: number;
+    units: number
+}
 
-function Checkout({ product}:CheckoutProps) {
+interface CheckoutProps {
+    product: Product;
+}
+
+function Checkout({ product }: CheckoutProps) {
     const [quantity, setQuantity] = useState(1);
     const [button, setButton] = useState(false);
-
+    const units = useRef(1)
     const total = (product.price * quantity).toFixed(2);
 
-    let productsInStorage = JSON.parse(localStorage.getItem("cart") || "[]");
     // let productsInStorage = [];
     // !localStorage.getItem("cart")
     //     ? localStorage.setItem("cart", JSON.stringify([])) 
     //     : (productsInStorage = JSON.parse(localStorage.getItem("cart")));
 
+    useEffect(() => {
+        const productsInStorage = JSON.parse(localStorage.getItem("cart") || "[]");
+        const one = productsInStorage.find(each => each.id === product.id);
+        if (one) {
+            setQuantity(one.units);
+            setButton(true);
+        } else {
+            setQuantity(1);
+            setButton(false);
+        }
+    }, [product.id]);
+
     const manageCart = () => {
+        let productsInStorage = JSON.parse(localStorage.getItem("cart") || "[]");
+
         const one = productsInStorage.find(each => each.id === product.id);
         if (!one) {
-            productsInStorage.push({...product,quantity,total});
+            product.units = quantity;
+            productsInStorage.push({ ...product, total });
             setButton(true);
         } else {
             productsInStorage = productsInStorage.filter(each => each.id !== product.id);
@@ -61,11 +76,11 @@ function Checkout({ product}:CheckoutProps) {
                     <div className={styles["checkout-process"]}>
                         <div className={styles["top"]}>
                             <input
-                                id="quantity"
                                 type="number"
                                 min="1"
                                 value={quantity}
-                                onChange={(event) => setQuantity(Number(event?.target.value))}
+                                ref={units}
+                                onChange={() => setQuantity(Number(units.current.value))}
                             />
                             <button
                                 type="button"
