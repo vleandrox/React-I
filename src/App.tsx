@@ -1,7 +1,7 @@
 import Home from './components/Home';
 import Details from './views/Details';
 import Cart from './views/Cart';
-import OnSale from './components/OnSale';
+import {OnSale} from './components/OnSale';
 import NotFound from './views/NotFound';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
