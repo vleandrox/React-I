@@ -67,8 +67,8 @@ export function OnSaleSlide() {
                     ))}
                 </div>
                 <div className={styles["slider-controls"]}>
-                    <button onClick={prevSlide} disabled={from === 0}>Previous</button>
-                    <button onClick={nextSlide} disabled={to >= onSaleProducts.length}>Next</button>
+                    <button onClick={prevSlide} disabled={from === 0}>{'Anterior'}</button>
+                    <button onClick={nextSlide} disabled={to >= onSaleProducts.length}>{'Siguiente'}</button>
                 </div>
             </div>
         </>
