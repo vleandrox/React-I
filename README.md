@@ -5,8 +5,6 @@
 ## Carpeta proyecto-final-egg 
 - Contiene el proyecto final de egg hasta el modulo finalizado.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
 - Configuraciones
 
 ```js
