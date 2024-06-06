@@ -14,3 +14,38 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.slider-controls {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 2em;
+}
+
+.slider-controls button {
+  background-color: #e25d29;
+  border: none;  
+  color: white; 
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border-radius: 12px;
+}
+
+
+.sales-title{
+  text-align: center;
+  padding: 0.2em;
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+.on-sale{
+  padding: 2em;
+}
