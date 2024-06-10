@@ -11,7 +11,7 @@ function ProductCard(props) {
                     <span className={styles["product-title"]}>{title}</span>
                     <span className={styles["product-description"]}>{color}</span>
                     <div className={styles["product-price-block"]}>
-                        <span className={styles["product-price"]}>{price}</span>
+                        <span className={styles["product-price"]}>S/.{price}</span>
                         <span className={styles["product-discount"]}>50% Off</span>
                     </div>
                     <div className={styles["product-tax-policy"]}>
