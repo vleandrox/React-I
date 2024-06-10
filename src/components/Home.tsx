@@ -9,14 +9,14 @@ import { useState } from 'react'
 
 function Home() {
     const [from, setFrom] = useState(0);
-    const [to, setTo] = useState(9);
+    const [to, setTo] = useState(8);
 
-    const totalPages = Math.ceil(products.length / 9);// calcular total de paginas
+    const totalPages = Math.ceil(products.length / 8);// calcular total de paginas
     console.log(totalPages)
 
     const handlePageClick = (pageNumber) => {
-        const newFrom = (pageNumber - 1) * 9;
-        const newTo = newFrom + 9;
+        const newFrom = (pageNumber - 1) * 8;
+        const newTo = newFrom + 8;
         setFrom(newFrom);
         setTo(newTo);
     }
@@ -26,7 +26,7 @@ function Home() {
             <Header></Header>
             <Hero first={"Tecnologia"} second={"Renovada"}></Hero>
             <main>
-                <div>
+                <div className={styles["container"]}>
                     <div className={styles["product-container"]} id="products">
                         {visibleProducts.map((each) => (
                             <ProductCard
@@ -50,13 +50,9 @@ function Home() {
                             </button>
                         ))}
                     </div>
+                    <OnSaleSlide></OnSaleSlide>
                 </div>
-
-
             </main>
-            <div className={styles["on-sale"]}>
-                <OnSaleSlide></OnSaleSlide>
-            </div>
             <Footer></Footer>
         </>
     );

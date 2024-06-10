@@ -196,7 +196,7 @@ const prod14 = new Product(
     "https://i.postimg.cc/HxGQcrcp/mock1.jpg",
   ],
   ["Silver", "Space Gray"],
-  false
+  true
 );
 const prod15 = new Product(
   "G7H8I9",
@@ -251,7 +251,7 @@ const prod18 = new Product(
     "https://i.postimg.cc/j55rfSGF/galaxy3.jpg",
   ],
   ["Black", "Silver", "White"],
-  false
+  true
 );
 const prod19 = new Product(
   "M4N5O6",

@@ -4,6 +4,45 @@ function Description({ product }) {
     return (
         <>
             <div className={styles["product-description-block"]}>
+                <h1 className={styles["title"]}>{product.title}</h1>
+                <form className={styles["selector"]}>
+                    <fieldset>
+                        <label className={styles["label"]} htmlFor="color">Color</label>
+                        <select id="color">
+                            {product.colors.map((each) => (
+                                <option key={each} value="Silver">
+                                    {each}
+                                </option>
+                            ))}
+                        </select>
+                    </fieldset>
+                </form>
+                <div className={styles["description"]}>
+                    <h1>{product.title}</h1>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
+                        unde!</p>
+                </div>
+            </div>
+
+            {/* <div className={styles["product-description-block"]}>
+                <h1 className={styles["title"]}>MackBook 15'</h1>
+                <form className={styles["selector"]}>
+                    <fieldset>
+                        <label className={styles["label"]} htmlFor="color">Color</label>
+                        <select id="color">
+                            <option value="Negro espacial">Negro Espacial</option>
+                            <option value="Gris espacial">Gris Espacial</option>
+                        </select>
+                    </fieldset>
+                </form>
+                <div className={styles["description"]}>
+                    <h1>MackBook Pro 15'</h1>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
+                        unde!</p>
+                </div>
+            </div> */}
+
+            {/* <div className={styles["product-description-block"]}>
                 <h1 className={styles["product-title"]}>{product.title}</h1>
                 <form className={styles["product-selector"]}>
                     <fieldset className={styles["product-fieldset"]}>
@@ -31,7 +70,7 @@ function Description({ product }) {
                         for professionals and creative individuals alike.
                     </p>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }

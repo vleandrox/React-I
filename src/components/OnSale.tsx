@@ -52,10 +52,12 @@ export function OnSaleSlide() {
     const visibleProducts = onSaleProducts.slice(from, to);
     return (
         <>
-            <div>
+            <div className={styles["offer-container"]}>
                 <h2 className={styles["sales-title"]}>Ofertas de la semana</h2>
-                <div className={styles["onsale-container"]}>
+                <button className={styles["prev-offer-button"]} onClick={prevSlide} disabled={from === 0}> {'<'} </button>
+                <div className={styles["offer-product-container"]}>                    
                     {visibleProducts.map((each) => (
+                        <div className={styles["product-card"]}>
                         <OnSaleCard
                             key={each.id}
                             id={each.id}
@@ -64,12 +66,14 @@ export function OnSaleSlide() {
                             color={each.colors[0]}
                             image={each.images[0]}
                         />
-                    ))}
+                        </div>
+                    ))}                                        
                 </div>
-                <div className={styles["slider-controls"]}>
+                <button className={styles["next-offer-button"]} onClick={nextSlide} disabled={to >= onSaleProducts.length}>{'>'}</button>
+                {/* <div className={styles["slider-controls"]}>
                     <button onClick={prevSlide} disabled={from === 0}>{'Anterior'}</button>
                     <button onClick={nextSlide} disabled={to >= onSaleProducts.length}>{'Siguiente'}</button>
-                </div>
+                </div> */}
             </div>
         </>
     )
